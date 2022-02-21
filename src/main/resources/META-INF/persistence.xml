@@ -19,7 +19,7 @@
 			<!--Cada vez que se aaranque el programa se borra lo anterior y se queda esto-->
 			<property name="javax.persistence.schema-generation.database.action" value="update"/>
 						 
-			<property name = "hibernate.show_sql" value = "true" />
+			<property name = "hibernate.show_sql" value = "false" />
 			<property name = "hibernate.dialect" value = "org.hibernate.dialect.MySQL8Dialect" />
 			
 		</properties>
