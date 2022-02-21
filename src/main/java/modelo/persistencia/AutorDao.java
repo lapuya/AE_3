@@ -55,7 +55,7 @@ public class AutorDao {
 			return null;
 		}		
 		//para hacer la consulta debemos de usar JPQL
-		Query query = em.createQuery("select from Autor a");
+		Query query = em.createQuery("select autor from Autor autor");
 		List<Autor> listaAutores = query.getResultList();
 		return listaAutores;
 	}

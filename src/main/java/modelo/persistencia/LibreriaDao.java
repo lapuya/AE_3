@@ -55,7 +55,7 @@ public class LibreriaDao {
 			return null;
 		}		
 		//para hacer la consulta debemos de usar JPQL
-		Query query = em.createQuery("select from Libreria libreria");
+		Query query = em.createQuery("select libreria from Libreria libreria");
 		List<Libreria> libreria = query.getResultList();
 		return libreria;
 	}

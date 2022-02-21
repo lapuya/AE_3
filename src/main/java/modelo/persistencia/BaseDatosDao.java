@@ -3,6 +3,11 @@ package modelo.persistencia;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
 import modelo.entidad.Autor;
 import modelo.entidad.Direccion;
 import modelo.entidad.Editorial;
@@ -125,9 +130,19 @@ public class BaseDatosDao {
 		AutorDao autorDao = new AutorDao();
 		autorDao.insertar(a1);
 
+	}
 
-
-
-		
+	public boolean conValores() {
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("Actividad3");
+		EntityManager em = factory.createEntityManager();
+		EntityTransaction et = em.getTransaction();
+		et.begin();
+		long numeroFilas = (long) em.createQuery("SELECT COUNT(a.id) FROM Autor a").getSingleResult();
+		et.commit();
+		em.close();
+		factory.close();
+		if (numeroFilas > 0)
+			return true;
+		return false;
 	}
 }
