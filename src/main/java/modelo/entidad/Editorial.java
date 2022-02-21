@@ -19,10 +19,13 @@ public class Editorial {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private int id_editorial;
+	
 	private String nombre;
+	
 	@Embedded
 	private Direccion direccion;
+	
 	@OneToMany(mappedBy = "editorial", cascade = CascadeType.ALL)
 	private List<Libro> librosPublicados;
 	
@@ -38,10 +41,10 @@ public class Editorial {
 		librosPublicados = new ArrayList<Libro>();
 	}
 	public int getId() {
-		return id;
+		return id_editorial;
 	}
 	public void setId(int id) {
-		this.id = id;
+		this.id_editorial = id;
 	}
 	public String getNombre() {
 		return nombre;
@@ -63,7 +66,11 @@ public class Editorial {
 	}
 	@Override
 	public String toString() {
-		return "Editorial [id=" + id + ", nombre=" + nombre + ", direccion=" + direccion + ", librosPublicados="
+		return "Editorial [id=" + id_editorial + ", nombre=" + nombre + ", direccion=" + direccion + ", librosPublicados="
 				+ librosPublicados + "]";
+	}
+	public void añadirLibro(Libro l1) {
+		librosPublicados.add(l1);
+		
 	}
 }

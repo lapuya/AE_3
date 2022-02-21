@@ -16,7 +16,7 @@ public class LibreriaDao {
 	
 	private boolean abrirConexion(){
 		try {
-			EntityManagerFactory factoria = Persistence.createEntityManagerFactory("LibreriaJPA");
+			EntityManagerFactory factoria = Persistence.createEntityManagerFactory("Actividad3");
 			em = factoria.createEntityManager();
 			return true;
 		} catch (Exception e) {

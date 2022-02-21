@@ -27,14 +27,56 @@ public class BaseDatosDao {
 
 
 		//8 libros
-		Libro l1 = new Libro("Fundacion", 23.9, ed1, a1); //isaac, RBA
-		Libro l2 = new Libro("El corazon delator", 20.9, ed2, a2); //edgar, grupo anaya
-		Libro l3 = new Libro("Sherlock Holmes", 24.9, ed1, a3); // arthur, RBA
-		Libro l4 = new Libro("Yo, robot", 17.9, ed2, a1); //isaac, grupo anaya
-		Libro l5 = new Libro("El gato negro", 12.9, ed1, a2); //edgar, RBA
-		Libro l6 = new Libro("El sabueso de los Baskerville", 16.9, ed2, a3); //arthur, grupo anaya
-		Libro l7 = new Libro("Robots e Imperio", 14.9, ed1, a1); //isaac, RBA
-		Libro l8 = new Libro("El pozo y el pendulo", 10.9, ed2, a2); //edgar, grupo anaya
+		Libro l1 = new Libro("Fundacion", 23.9);
+		//Bidireccionalidad
+		l1.setAutor(a1);
+		l1.setEditorial(ed1);
+		a1.añadirLibro(l1);
+		ed1.añadirLibro(l1);
+		
+		Libro l2 = new Libro("El corazon delator", 20.9, ed2, a2);
+		//bidireccionalidad
+		l2.setAutor(a2);
+		l2.setEditorial(ed2);
+		a2.añadirLibro(l2);
+		ed2.añadirLibro(l2);
+		
+		Libro l3 = new Libro("Sherlock Holmes", 24.9, ed1, a3); 
+		//bidireccionalidad
+		l3.setAutor(a3);
+		l3.setEditorial(ed1);
+		a3.añadirLibro(l3);
+		ed1.añadirLibro(l3);
+		Libro l4 = new Libro("Yo, robot", 17.9, ed2, a1);
+		//bidireccionalidad
+		l4.setAutor(a1);
+		l4.setEditorial(ed2);
+		a1.añadirLibro(l4);
+		ed2.añadirLibro(l4);
+		
+		Libro l5 = new Libro("El gato negro", 12.9, ed1, a2);
+		l5.setAutor(a2);
+		l5.setEditorial(ed1);
+		a2.añadirLibro(l5);
+		ed1.añadirLibro(l5);
+		
+		Libro l6 = new Libro("El sabueso de los Baskerville", 16.9, ed2, a3);
+		l6.setAutor(a3);
+		l6.setEditorial(ed2);
+		a3.añadirLibro(l6);
+		ed2.añadirLibro(l6);
+		
+		Libro l7 = new Libro("Robots e Imperio", 14.9, ed1, a1);
+		l7.setAutor(a1);
+		l7.setEditorial(ed1);
+		a1.añadirLibro(l7);
+		ed1.añadirLibro(l7);
+		
+		Libro l8 = new Libro("El pozo y el pendulo", 10.9, ed2, a2);
+		l8.setAutor(a2);
+		l8.setEditorial(ed2);
+		a2.añadirLibro(l8);
+		ed2.añadirLibro(l8);
 
 		//2 Librerias 
 		Direccion d3 = new Direccion ("Leganitos", 5, "Madrid", "España", "28045");
@@ -82,8 +124,9 @@ public class BaseDatosDao {
 		
 		AutorDao autorDao = new AutorDao();
 		autorDao.insertar(a1);
-		autorDao.insertar(a2);
-		autorDao.insertar(a3);
+
+
+
 
 		
 	}

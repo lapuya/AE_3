@@ -16,7 +16,7 @@ public class LibroDao {
 	
 	private boolean abrirConexion(){
 		try {
-			EntityManagerFactory factoria = Persistence.createEntityManagerFactory("AutorJPA");
+			EntityManagerFactory factoria = Persistence.createEntityManagerFactory("Actividad3");
 			em = factoria.createEntityManager();
 			return true;
 		} catch (Exception e) {

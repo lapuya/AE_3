@@ -17,7 +17,8 @@ public class Autor {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private int id_autor;
+	
 	private String nombre, apellidos, fechaNacimiento;
 	
 	@OneToMany(mappedBy="autor", cascade=CascadeType.ALL)
@@ -35,10 +36,10 @@ public class Autor {
 		libros = new ArrayList<Libro>();
 	}
 	public int getId() {
-		return id;
+		return id_autor;
 	}
 	public void setId(int id) {
-		this.id = id;
+		this.id_autor = id;
 	}
 	public String getNombre() {
 		return nombre;
@@ -66,8 +67,12 @@ public class Autor {
 	}
 	@Override
 	public String toString() {
-		return "Autor [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", fechaNacimiento="
+		return "Autor [id=" + id_autor + ", nombre=" + nombre + ", apellidos=" + apellidos + ", fechaNacimiento="
 				+ fechaNacimiento + ", libros=" + libros + "]";
+	}
+	public void añadirLibro(Libro l1) {
+		libros.add(l1);
+		
 	}
 
 	

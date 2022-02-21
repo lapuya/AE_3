@@ -21,20 +21,22 @@ public class Libro {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private int id_libro;
 	private String titulo;
 	private double precio;
-	@ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "fk_id_editorial", referencedColumnName = "id")    
+	
+	@ManyToOne (cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "fk_id_editorial", referencedColumnName = "id_editorial")    
 	private Editorial editorial;
+	
 	@ManyToOne(cascade = CascadeType.PERSIST)
-	@JoinColumn(name = "fk_id_autor", referencedColumnName = "id")   
+	@JoinColumn(name = "fk_id_autor", referencedColumnName = "id_autor")   
 	private Autor autor;
 	
 	@ManyToMany(cascade=CascadeType.PERSIST)
 	@JoinTable(name="libro_libreria", 
-			   joinColumns = {@JoinColumn(name="fk_id_libro", referencedColumnName="id")},
-			   inverseJoinColumns = {@JoinColumn(name="fk_id_libreria", referencedColumnName="id")})
+			   joinColumns = {@JoinColumn(name="fk_id_libro", referencedColumnName="id_libro")},
+			   inverseJoinColumns = {@JoinColumn(name="fk_id_libreria", referencedColumnName="id_libreria")})
 	
     private List<Libreria> librerias;
 	
@@ -53,11 +55,17 @@ public class Libro {
 		this.autor = autor;
 		this.librerias = new ArrayList<Libreria>();
 	}
+	public Libro(String titulo, double precio) {
+		this.titulo = titulo;
+		this.precio = precio;
+	}
+
+
 	public int getId() {
-		return id;
+		return id_libro;
 	}
 	public void setId(int id) {
-		this.id = id;
+		this.id_libro = id;
 	}
 	public String getTitulo() {
 		return titulo;
@@ -98,7 +106,7 @@ public class Libro {
 
 	@Override
 	public String toString() {
-		return "Libro [id=" + id + ", titulo=" + titulo + ", precio=" + precio + ", editorial=" + editorial + ", autor="
+		return "Libro [id=" + id_libro + ", titulo=" + titulo + ", precio=" + precio + ", editorial=" + editorial + ", autor="
 				+ autor + "]";
 	}
 	

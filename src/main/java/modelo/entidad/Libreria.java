@@ -18,12 +18,12 @@ public class Libreria {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private int id_libreria;
 	private String nombre, nombreDueño;
 	@Embedded
 	private Direccion direccion;
 	
-	@ManyToMany(mappedBy="librerias", cascade = CascadeType.PERSIST)
+	@ManyToMany(cascade = CascadeType.PERSIST)
 	private List<Libro> coleccionLibros;
 	
 	public Libreria () {
@@ -38,10 +38,10 @@ public class Libreria {
 		coleccionLibros = new ArrayList<Libro>();
 	}
 	public int getId() {
-		return id;
+		return id_libreria;
 	}
 	public void setId(int id) {
-		this.id = id;
+		this.id_libreria = id;
 	}
 	public String getNombre() {
 		return nombre;
@@ -73,7 +73,7 @@ public class Libreria {
 	}
 	@Override
 	public String toString() {
-		return "Libreria [id=" + id + ", nombre=" + nombre + ", nombreDueño=" + nombreDueño + ", direccion=" + direccion
+		return "Libreria [id=" + id_libreria + ", nombre=" + nombre + ", nombreDueño=" + nombreDueño + ", direccion=" + direccion
 				+ ", coleccionLibros=" + coleccionLibros + "]";
 	}
 	
