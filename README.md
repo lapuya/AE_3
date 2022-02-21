@@ -38,13 +38,14 @@ Dar de alta 8 libros, cada libro será escrito por uno de los autores dados de a
 Mostrar todos los libros dados de alta, con su editorial y su autor
 
 
-![imagen](https://user-images.githubusercontent.com/79358705/154993920-af2992bc-588f-4e1c-b8cd-152b70d1d5ab.png)
+![imagen](https://user-images.githubusercontent.com/79358705/155010146-b4c0c474-287f-442c-8fa4-a96c9409493c.png)
+
 
 
 Mostrar todos los autores dados de alta, con sus libros asociados
 
 
-![imagen](https://user-images.githubusercontent.com/79358705/154994009-9032b0cc-674b-4255-aebc-2723f4f39213.png)
+![imagen](https://user-images.githubusercontent.com/79358705/155010244-c5d1d72b-d964-4dd7-80b9-bf8b3102057f.png)
 
 Mostrar todas las librerías, con solamente sus libros asociados
 
@@ -53,8 +54,7 @@ Mostrar todas las librerías, con solamente sus libros asociados
 
 Mostrar todos los libros dados de alta, y en la librería en la que están.
 
-
-![imagen](https://user-images.githubusercontent.com/79358705/154994518-3821c38b-968a-409c-aa7e-45ef2ef80fdd.png)
+![imagen](https://user-images.githubusercontent.com/79358705/155010322-e22472fe-6e02-456f-9a5e-7a2c341b7ee3.png)
 
 
                                             Requerimiento 3. Modelo de datos
