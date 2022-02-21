@@ -45,12 +45,11 @@ Mostrar todos los libros dados de alta, con su editorial y su autor
 Mostrar todos los autores dados de alta, con sus libros asociados
 
 
-![imagen](https://user-images.githubusercontent.com/79358705/155010244-c5d1d72b-d964-4dd7-80b9-bf8b3102057f.png)
+![imagen](https://user-images.githubusercontent.com/79358705/155011093-5c8b4a6a-6ff5-4da5-84d1-da720d8ba887.png)
 
 Mostrar todas las librerías, con solamente sus libros asociados
 
-
-![imagen](https://user-images.githubusercontent.com/79358705/154994287-c4366a57-2066-40f1-85a9-9ac3f1612f6c.png)
+![imagen](https://user-images.githubusercontent.com/79358705/155011171-53c39436-1bb7-4862-821f-c3af82dd99a4.png)
 
 Mostrar todos los libros dados de alta, y en la librería en la que están.
 
