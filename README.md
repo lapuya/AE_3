@@ -5,7 +5,7 @@ Cuando arrancamos nuestra aplicación, nos sale este log en rojo:
 
 Por lo que hemos decidido implementar un par de dependencias en el pom para que quede más bonito:
 ![imagen](https://user-images.githubusercontent.com/79358705/154986885-4ae284f7-c42f-46db-b982-25cd813e8860.png)
-![imagen](https://user-images.githubusercontent.com/79358705/154989236-31664e60-c7ba-4c1f-9db2-18f800036bbd.png)
+
 
 Este es nuestro esquema de la base de datos:
 
