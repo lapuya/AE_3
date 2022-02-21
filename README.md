@@ -57,6 +57,13 @@ Mostrar todos los libros dados de alta, y en la librería en la que están.
 ![imagen](https://user-images.githubusercontent.com/79358705/154994518-3821c38b-968a-409c-aa7e-45ef2ef80fdd.png)
 
 
+                                            Requerimiento 3. Modelo de datos
+                                            
+                                           
+![imagen](https://user-images.githubusercontent.com/79358705/154995504-869c418b-ef08-4a83-8cee-5bf7abbbe693.png)
+
+
+
 
 
 
