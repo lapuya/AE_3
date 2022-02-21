@@ -24,6 +24,8 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>5.4.21.Final</version>
 		</dependency>
+		
+		<!-- Estas dos dependencias las añadimos para quitar unos logs que salen en rojo en la consola -->
 
 		<dependency>
 			<groupId>log4j</groupId>
